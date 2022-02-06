@@ -1,6 +1,10 @@
 ---
 title: "R Notebook"
-output: html_notebook
+output:
+  word_document: default
+  html_document:
+    df_print: paged
+  pdf_document: default
 ---
 
 ```{r}
@@ -8,6 +12,19 @@ library(googlesheets4)
 library(tidyverse)
 library(glue)
 ```
+
+```{r}
+# gs4_auth(
+# email = "jacciziebert@gmail.com",
+# path = NULL,
+# scopes = "https://www.googleapis.com/auth/spreadsheets",
+# cache = gargle::gargle_oauth_cache(),
+# use_oob = gargle::gargle_oob_default(),
+# token = NULL
+# )
+```
+
+
 ```{r}
 resume <- read_sheet("https://docs.google.com/spreadsheets/d/1Cma5QJ6BzKUj449YECrkPvoePGNqZBebLx5EHbdZ8tk/edit?usp=sharing") %>% mutate(id = 1:n())
 ```
