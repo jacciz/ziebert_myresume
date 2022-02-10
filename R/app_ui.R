@@ -4,6 +4,7 @@
 #'     DO NOT REMOVE.
 #' @import shiny resume
 #' @noRd
+#' TODO grey background?
 app_ui <- function(request) {
   tagList(
     # Leave this function for adding external resources
@@ -58,26 +59,29 @@ I spend my free time as a strategy board game enthusiast, a cyclist, a kitchen e
         resume_section(
           id = "dash_projects",
           h4('Data Viz & Dashboards'),
+          h5('WisDOT Crash Statistics Dashboard'),
+          tagList(tags$span(
+            HTML("<div id = 'header'> <p style='float:left;padding:10px;width:20%'>A Wisconsin Crash Statistics Dashboard built with R Shiny, leaflet, plotly under a golem framework. Switching to golem, I found that the app became extremely slow. Through performance testing, I found the bottleneck was tied to simply loading the data. I found SQLite to be an optimal solution as it is saved locally inside the package while the data is stagnant. View it <a href='https://jacciz.shinyapps.io/Shiny_Crashes/'>here</a>.</p> <img src=www/crash_dashboard.png style=padding:10px;float:right;width:80%></div>"))),
+          h5('Traffic Summary of 72 County Profiles'),
           tagList(tags$span(
             HTML(
-              "<p>A Wisconsin Crash Statistics Dashboard built with R Shiny, leaflet, plotly under a golem framework. Switching to golem, I found that the app became extremely slow. Through performance testing, I found the bottleneck was tied to simply loading the data. I found SQLite to be an optimal solution as it is saved locally inside the package while the data is stagnant. View it <a href='https://jacciz.shinyapps.io/Shiny_Crashes/'>here</a>.</p> <img src=www/crash_dashboard.png style=height:600px;display:inline-block;>"))),
+              "<p style='float:left;padding:10px;width:20%'>I wrote a parameterized R Markdown to fully automate and create crash data summaries of 72 counties. In the past, each county was done by hand using Word. View Dane County's Safety Summary <a href='tiny.cc/46unuz'>here</a>.</p> View it <a href='https://jacciz.shinyapps.io/Shiny_Crashes/'>here</a>.</p> <img src=www/crash_dashboard.png style=padding:10px;float:right;width:80%>"))),
+          h5('Coffee Roasting Profiler'),
           tagList(tags$span(
             HTML(
-              "<p>I developed an R package to import and analyze our crash data inside an R environment. It came to a point where I was constantly sourcing the same series scripts. It was logical to make these scripts into an R package. Furthermore, the package has functions that query certain crash flags. This way I don't have to look up the query of each crash flag; it's just written inside the function. View the code <a href='https://jacciz.shinyapps.io/Shiny_Crashes/'>here</a>.</p> <img src=www/crash_dashboard.png style=height:600px;display:inline-block;>"))),
-          tagList(tags$span(
-            HTML(
-              "<p>I wrote a parameterized R Markdown to fully automate and create crash data summaries of 72 counties. In the past, each county was done by hand using Word. View Dane County's Safety Summary <a href='tiny.cc/46unuz'>here</a>.</p> View it <a href='https://jacciz.shinyapps.io/Shiny_Crashes/'>here</a>.</p> <img src=www/crash_dashboard.png style=height:600px;display:inline-block;>"))),
-          tagList(tags$span(
-            HTML(
-              "<p>An ameateur coffee roaster, I made this dashboard to visualize my roasts. The tricky part was adding the RoR (rate of return) curves onto the graph as this is calculated via an algorethm written in Python inside Artisan software. I found this piece of code and rewrote part of it so it would work for my app. Next I used the reticulate package so the app can read Python code. </p> <img src=www/crash_dashboard.png style=height:400px;display:inline-block;>")))
+              "<p style='float:left;padding:10px;width:20%'>An ameateur coffee roaster, I made this dashboard to visualize my roasts. The tricky part was adding the RoR (rate of return) curves onto the graph as this is calculated via an algorethm written in Python inside Artisan software. I found this piece of code and rewrote part of it so it would work for my app. Next I used the reticulate package so the app can read Python code. </p> <img src=www/crash_dashboard.png style=padding:10px;float:right;width:80%>")))
         ),
         # personal projects
         resume_section(
           id = "coding_projects",
           h4('Coding Projects'),
+          h5('wisdotcrashdatabase R package'),
           tagList(tags$span(
             HTML(
-              "<p>Working inside an R environemnt, I made an R package for data analysis for our crash databases. The crash form was changed in 2017, so this is able to import old and new data into a single dataframe.</p> <a href='https://github.com/jacciz/wisdotcrashdatabase/blob/master/wisdotcrashdatabase_1.00.pdf'>here.</a>")))
+              "<p style='float:left;padding:10px;width:20%'>I developed an R package to import and analyze our crash data inside an R environment. It came to a point where I was constantly sourcing the same series scripts. It was logical to make these scripts into an R package. Furthermore, the package has functions that query certain crash flags. This way I don't have to look up the query of each crash flag; it's just written inside the function. View the code <a href='https://jacciz.shinyapps.io/Shiny_Crashes/'>here</a>.</p> <img src=www/crash_dashboard.png style=padding:10px;float:right;width:80%>"))),
+          tagList(tags$span(
+            HTML(
+              "<p style='float:left;padding:10px;width:20%'>Working inside an R environemnt, I made an R package for data analysis for our crash databases. The crash form was changed in 2017, so this is able to import old and new data into a single dataframe.</p> <a href='https://github.com/jacciz/wisdotcrashdatabase/blob/master/wisdotcrashdatabase_1.00.pdf'>here.</a>")))
         ),
         # education
         resume_section(id = "education",
