@@ -68,8 +68,8 @@ ui <- dashboardPage(
                 title = userDescription(
                   title = "Hi, I'm Jacci Ziebert",
                   subtitle = 'Data Analyst', #'Madison, WI jacciziebert@gmail.com',
-                  type = 1,
-                  image = "C:/Users/jacci/Documents/ziebert_myresume/inst/app/www/plane_small.jpg", # or just www/ ??
+                  type = 1
+                  # image = "C:/Users/jacci/Documents/ziebert_myresume/inst/app/www/plane_small.jpg", # or just www/ ??
                 ),
                 status = "warning",
                 footer = tagList(tags$span(
@@ -210,14 +210,14 @@ I like to look for ways to streamline manual tasks, make dashboards, and to tran
                   title = 'Traffic Summary of 72 County Profiles',
                   tagList(tags$span(
                     HTML(
-                      "<p style='float:left;padding:10px;width:20%'>I wrote a parameterized R Markdown to fully automate and create crash data summaries of 72 counties. In the past, each county was done by hand using Word. View Dane County's Safety Summary <a href='tiny.cc/46unuz'>here</a>.</p> View it <a href='https://jacciz.shinyapps.io/Shiny_Crashes/'>here</a>.</p> <img src=www/crash_dashboard.png style=padding:10px;float:right;width:80%>"
+                      "<p style='float:left;padding:10px;width:20%'>I wrote a parameterized R Markdown to fully automate and create crash data summaries of 72 counties. In the past, each county was done by hand using Word. View Dane County's Safety Summary <a href='tiny.cc/46unuz'>here</a>.</p> View it <a href='https://jacciz.shinyapps.io/Shiny_Crashes/'>here</a>.</p> <img src=www/county_profile.png style=padding:10px;float:right;width:80%>"
                     )
                   ))),
               box(width = NULL,
                   title = 'Coffee Roasting Profiler',
                   tagList(tags$span(
                     HTML(
-                      "<p style='float:left;padding:10px;width:20%'>An ameateur coffee roaster, I made this dashboard to visualize my roasts. The tricky part was adding the RoR (rate of return) curves onto the graph as this is calculated via an algorethm written in Python inside Artisan software. I found this piece of code and rewrote part of it so it would work for my app. Next I used the reticulate package so the app can read Python code. </p> <img src=www/crash_dashboard.png style=padding:10px;float:right;width:80%>"
+                      "<p style='float:left;padding:10px;width:20%'>An ameateur coffee roaster, I made this dashboard to visualize my roasts. The tricky part was adding the RoR (rate of return) curves onto the graph as this is calculated via an algorethm written in Python inside Artisan software. I found this piece of code and rewrote part of it so it would work for my app. Next I used the reticulate package so the app can read Python code. </p> <img src=www/coffee_roasting.png style=padding:10px;float:right;width:80%>"
                     )
                   )))
             )), 

@@ -26,7 +26,7 @@ library(glue)
 
 
 ```{r}
-resume <- read_sheet("https://docs.google.com/spreadsheets/d/1Cma5QJ6BzKUj449YECrkPvoePGNqZBebLx5EHbdZ8tk/edit?usp=sharing") %>% mutate(id = 1:n())
+# resume <- read_sheet("https://docs.google.com/spreadsheets/d/1Cma5QJ6BzKUj449YECrkPvoePGNqZBebLx5EHbdZ8tk/edit?usp=sharing") %>% mutate(id = 1:n())
 ```
 
 ```{r}
